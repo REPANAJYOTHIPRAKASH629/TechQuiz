@@ -1,1 +1,1 @@
-## TechQuiz
+# TechQuiz
