@@ -55,9 +55,17 @@ public class ConnectorAi extends AppCompatActivity implements View.OnClickListen
             }
             public void onFinish() {
                 // When the time runs out, load the next question
-                selectedAnswer="";
-                currentQuestionIndex++;
-                loadNewQuestion();
+                if(currentQuestionIndex == totalQuestion)
+                {
+                    finishQuiz();
+                    return ;
+                }
+                else
+                {
+                    selectedAnswer="";
+                    currentQuestionIndex++;
+                    loadNewQuestion();
+                }
             }
         };
 
